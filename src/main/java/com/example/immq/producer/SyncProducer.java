@@ -15,7 +15,7 @@ public class SyncProducer {
         DefaultMQProducer producer = new DefaultMQProducer("test"); //（1）
         producer.createTopic( null, "TopicTest",4);
         // 设置NameServer地址
-        producer.setNamesrvAddr("172.17.212.15:9876");  //（2）
+        producer.setNamesrvAddr("localhost:9876");  //（2）
         // 启动producer
         producer.start();
         for (int i = 0; i < 100; i++) {
